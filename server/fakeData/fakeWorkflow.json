@@ -1,0 +1,195 @@
+[
+  {
+    "id": "1",
+    "data": {
+      "label": "🛒 New Order"
+    },
+    "position": {
+      "x": 222,
+      "y": 0
+    },
+    "style": {
+      "background": "#BEE3F8",
+      "color": "#333",
+      "border": "2px solid #222138"
+    },
+    "type": "input",
+    "draggable": true,
+    "autoMove": true,
+    "out": ["2"]
+  },
+  {
+    "id": "2",
+    "data": {
+      "label": "Fraud Check",
+      "ifstatement": "\"a\" == \"a\"",
+      "code": "outputPort = 0;\n if ({{{ifstatement}}}) { outputPort = 1 } else { outputPort = 0 };\n return {obj, outputPort};"
+    },
+    "position": {
+      "x": 222,
+      "y": 100
+    },
+    "type": "decision",
+    "draggable": true,
+    "autoMove": true,
+    "out": ["2c", "2a"]
+  },
+  {
+    "id": "2a",
+    "data": {
+      "label": "Manual Approval",
+      "code": "  var outputPort = 0;\n  return { obj, outputPort };"
+    },
+    "position": {
+      "x": 434,
+      "y": 200
+    },
+    "type": "decision",
+    "draggable": true,
+    "autoMove": true,
+    "out": ["2c", "10a"]
+  },
+  {
+    "id": "4c",
+    "data": {
+      "label": "Cancel Order ⛔"
+    },
+    "position": {
+      "x": 400,
+      "y": 700
+    },
+    "style": {
+      "background": "#FEB2B2",
+      "color": "#333",
+      "border": "2px solid #222138"
+    },
+    "type": "output",
+    "draggable": true,
+    "autoMove": true,
+    "out": []
+  },
+  {
+    "id": "2c",
+    "data": {
+      "label": "Find All Locations with Complete Inventory",
+      "code": "  var outputPort = 0;\n  return { obj, outputPort };",
+      "leftNodeName": "None",
+      "rightNodeName": ">0"
+    },
+    "position": {
+      "x": 111,
+      "y": 300
+    },
+    "type": "decision",
+    "draggable": true,
+    "autoMove": true,
+    "out": ["3c", "2d"]
+  },
+  {
+    "id": "3c",
+    "data": {
+      "label": "Split Shipment ← →  based on Lowest Cost"
+    },
+    "position": {
+      "x": 0,
+      "y": 500
+    },
+    "draggable": true,
+    "autoMove": true,
+    "type": "default",
+    "out": ["4b"]
+  },
+  {
+    "id": "4a",
+    "data": {
+      "label": "Problem Order ⚠️"
+    },
+    "position": {
+      "x": 200,
+      "y": 700
+    },
+    "style": {
+      "background": "white",
+      "color": "#333",
+      "border": "2px solid #222138"
+    },
+    "type": "output",
+    "draggable": true,
+    "autoMove": true,
+    "out": []
+  },
+  {
+    "id": "2d",
+    "data": {
+      "label": "Sort Locations by Distance"
+    },
+    "position": {
+      "x": 222,
+      "y": 400
+    },
+    "draggable": true,
+    "autoMove": true,
+    "out": ["3b"]
+  },
+  {
+    "id": "3b",
+    "data": {
+      "label": "Select Lowest Cost Shipping"
+    },
+    "position": {
+      "x": 222,
+      "y": 500
+    },
+    "draggable": true,
+    "autoMove": true,
+    "out": ["4b"]
+  },
+  {
+    "id": "4b",
+    "data": {
+      "label": "Ship 📦"
+    },
+    "position": {
+      "x": 0,
+      "y": 700
+    },
+    "style": {
+      "background": "#C6F6D5",
+      "color": "#333",
+      "border": "2px solid #222138"
+    },
+    "type": "output",
+    "draggable": true,
+    "autoMove": true,
+    "out": []
+  },
+  {
+    "id": "10a",
+    "data": {
+      "label": "Notify Customer"
+    },
+    "position": {
+      "x": 444,
+      "y": 500
+    },
+    "type": "notification",
+    "draggable": true,
+    "autoMove": true,
+    "out": ["4c"]
+  },
+  {
+    "id": "comment-1",
+    "data": {
+      "label": "At this point the workflow waits on the third party system"
+    },
+    "position": {
+      "x": 28.626315789473665,
+      "y": 117.22631578947369
+    },
+    "style": {},
+    "type": "comment",
+    "draggable": true,
+    "autoMove": false,
+    "out": []
+  }
+]
