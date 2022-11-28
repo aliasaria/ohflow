@@ -6,39 +6,25 @@ OhFlow is a lowcode GUI to create workflows that can process objects. OhFlow hea
 
 For information on the concepts behind the application, read the [Overview](OVERVIEW.md)
 
+If you are looking to build a GUI workflow editor (or embed one in your application), this application can be a good starting point.
+
+OhFlow is a work in progress. If you'd like to contribute, the best way to start is to run it locally, play with it, and then work on completing sections of the application that need work.
+
 # Quick Start:
 
 To get started run the following:
 
 `node ./server/app.js`
 
-To start the webserver.
+To start the (backend) webserver.
 
 Then, in a separate window run:
 
 `npm start`
 
-To start the GUI and then you can visit `http://localhost:3000` to use the app.
+To start the (frontend) GUI and then you can visit `http://localhost:3000` to use the app.
 
 # Available Scripts
-
-In the project directory, you can run:
-
-## Webserver:
-
-### `node ./server/app.js`
-
-Starts the webserver and database
-
-## React Frontend:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `npm run build`
 
