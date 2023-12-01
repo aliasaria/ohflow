@@ -26,7 +26,7 @@ A **workflow** is a graph of nodes that process objects. Workflows themselves ar
 
 ![Example Workflow](/docs/img/workflow.png)
 
-A **node** is a single processing step in a workflow. Nodes can be created and added to the library of available nodes. Every node must have _execution code_ which takes in an object as a parametter. Every execution step in a node outputs two things: 1) the new object after processing 2) The output node that represents the next step for the workflow to process
+A **node** is a single processing step in a workflow. Nodes have input and output ports. Nodes can be created and added to the library of available nodes. Every node must have _execution code_ which takes in an object as a parametter. Every execution step in a node outputs two things: 1) the new object after processing 2) The output port that represents the path of the next step for the workflow to process
 
 ![Example Node](/docs/img/node.png)
 
