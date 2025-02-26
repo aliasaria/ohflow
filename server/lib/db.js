@@ -2,6 +2,8 @@ const { Sequelize, DataTypes } = require("sequelize");
 
 let db = {};
 
+console.log("connecting to db");
+
 db.sequelize = new Sequelize({
   dialect: "sqlite",
   storage: "db/database.sqlite",

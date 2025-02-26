@@ -135,4 +135,5 @@ app.get("/tenant/:tenantId/trigger/:triggerId", (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
+  InitializeDB();
 });

@@ -162,6 +162,7 @@ async function createTriggers() {
 }
 
 async function main() {
+  console.log("Initializing Database ==============");
   await db.sequelize.sync({ force: true }); //force true drops tables if they exist, wiping everything
 
   // //Save one fake job
